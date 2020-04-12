@@ -114,10 +114,11 @@ export default {
       }
     },
     autoSelectCountryByIP() {
-      fetch('https://api.myip.com')
+      fetch('https://ipapi.co/json/')
         .then(d => d.json())
         .then((data) => {
-          this.selectedCountryCode = data.cc;
+          console.log(data);
+          this.selectedCountryCode = data.country_code;
         });
     },
     mapCountryDataForMenu(countriesDataList) {
