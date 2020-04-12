@@ -117,7 +117,6 @@ export default {
       fetch('https://ipapi.co/json/')
         .then(d => d.json())
         .then((data) => {
-          console.log(data);
           this.selectedCountryCode = data.country_code;
         });
     },
